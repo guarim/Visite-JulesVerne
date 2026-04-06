@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAP – Menuisier Installateur</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4/hands.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+  
+</head>
+<body>
+
+<video id="camera-video" autoplay playsinline muted></video>
+<canvas id="camera-canvas"></canvas>
+<div id="hand-cursor"></div>
+<div id="cursor-ring"></div>
+<div id="camera-status"><div class="dot"></div><span class="status-text">Démarrage…</span></div>
+<div id="zoom-overlay"><img src="" alt="zoom"></div>
+<div id="zoom-indicator"></div>
+<div id="gesture-hint">
+  <span>☝ Index droit</span> — naviguer<br>
+  <span>🤏🤏 Deux pinces</span> — zoomer<br>
+  <span>✊✊ Deux poings</span> — retour
+</div>
+<div id="page-transition"></div>
+
+<header id="page-header">
+  <div class="logo-text">LPJ <span>Jules Verne</span></div>
+  <a href="f2.html" class="back-btn" data-link="f2.html">
+    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Menuiserie
+  </a>
+  <div class="page-title">CAP – Menuisier Installateur</div>
+</header>
+
+<main id="main-content">
+  <div class="page-image-video" id="piv-container">
+
+    <div class="piv-image-panel" id="piv-image">
+      <img src="images/f21.png" alt="CAP – Menuisier Installateur" draggable="false">
+    </div>
+
+    <div class="piv-video-panel" id="piv-video">
+      <!-- Miniature / bouton play -->
+      <div class="video-thumbnail" id="video-thumb">
+        <div class="play-icon">
+          <svg width="28" height="28" fill="white" viewBox="0 0 24 24">
+            <polygon points="5,3 19,12 5,21"/>
+          </svg>
+        </div>
+        <p>Cliquez pour lancer la vidéo</p>
+      </div>
+      <!-- iFrame YouTube (chargé au clic) -->
+      <iframe id="yt-iframe" src="" allow="autoplay; encrypted-media" allowfullscreen style="display:none;"></iframe>
+    </div>
+
+  </div>
+</main>
+
+<script>
+const YT_URL = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0";
+const pivImage = document.getElementById('piv-image');
+const pivVideo = document.getElementById('piv-video');
+const thumb = document.getElementById('video-thumb');
+const iframe = document.getElementById('yt-iframe');
+let videoActive = false;
+
+function activateVideo() {
+  videoActive = true;
+  pivImage.classList.add('shrunk');
+  pivVideo.classList.add('expanded');
+  thumb.classList.add('hidden');
+  iframe.src = YT_URL;
+  iframe.style.display = 'block';
+}
+
+function deactivateVideo() {
+  videoActive = false;
+  pivImage.classList.remove('shrunk');
+  pivVideo.classList.remove('expanded');
+  thumb.classList.remove('hidden');
+  iframe.src = '';
+  iframe.style.display = 'none';
+}
+
+// Clic souris standard
+pivVideo.addEventListener('click', () => {
+  if (!videoActive) activateVideo();
+  else deactivateVideo();
+});
+
+// Hover curseur main (déclenché via data-link-action)
+pivVideo.dataset.videoToggle = 'true';
+
+// Écoute fin de vidéo via postMessage YouTube
+window.addEventListener('message', (e) => {
+  if (e.data && typeof e.data === 'string') {
+    try {
+      const d = JSON.parse(e.data);
+      if (d.event === 'onStateChange' && d.info === 0) deactivateVideo();
+    } catch(_) {}
+  }
+});
+</script>
+
+<script src="js/hand-tracker.js"></script>
+<script src="js/page-controller.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les formations du lycée</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4/hands.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+  <style>
+    .grid-container.cols-3 {
+      grid-template-rows: repeat(2, 1fr);
+      width: calc(100% - 48px);
+      height: calc(100% - 48px);
+    }
+    .grid-item { aspect-ratio: unset; }
+  </style>
+</head>
+<body>
+
+<video id="camera-video" autoplay playsinline muted></video>
+<canvas id="camera-canvas"></canvas>
+<div id="hand-cursor"></div>
+<div id="cursor-ring"></div>
+<div id="camera-status"><div class="dot"></div><span class="status-text">Démarrage…</span></div>
+<div id="zoom-overlay"><img src="" alt="zoom"></div>
+<div id="zoom-indicator"></div>
+<div id="gesture-hint">
+  <span>☝ Index droit</span> — naviguer<br>
+  <span>🤏🤏 Deux pinces</span> — zoomer<br>
+  <span>✊✊ Deux poings</span> — retour
+</div>
+<div id="page-transition"></div>
+
+<header id="page-header">
+  <div class="logo-text">LPJ <span>Jules Verne</span></div>
+  <a href="index.html" class="back-btn" data-link="index.html">
+    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Accueil
+  </a>
+  <div class="page-title">Les formations du lycée</div>
+</header>
+
+<main id="main-content">
+  <div class="page-grid">
+    <div class="grid-container cols-3">
+
+      <div class="grid-item" data-link="f1.html">
+        <img src="images/1.png" alt="Formation 1 – Électricité">
+        <div class="hover-overlay"></div>
+      </div>
+
+      <div class="grid-item" data-link="f2.html">
+        <img src="images/2.png" alt="Formation 2 – Menuiserie">
+        <div class="hover-overlay"></div>
+      </div>
+
+      <div class="grid-item" data-link="f3.html">
+        <img src="images/3.png" alt="Formation 3 – Bâtiment">
+        <div class="hover-overlay"></div>
+      </div>
+
+      <div class="grid-item" data-link="f4.html">
+        <img src="images/4.png" alt="Formation 4 – Prépa-métiers">
+        <div class="hover-overlay"></div>
+      </div>
+
+      <div class="grid-item" data-link="f5.html">
+        <img src="images/5.png" alt="Formation 5 – Maintenance">
+        <div class="hover-overlay"></div>
+      </div>
+
+      <div class="grid-item" data-link="f6.html">
+        <img src="images/6.png" alt="CDI">
+        <div class="hover-overlay"></div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<script src="js/hand-tracker.js"></script>
+<script src="js/page-controller.js"></script>
+</body>
+</html>

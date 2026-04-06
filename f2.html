@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Métiers de l'agencement, de la menuiserie et de l'ameublement</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4/hands.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+  <style>
+    .grid-container.cols-2 {
+      grid-template-rows: repeat(2, 1fr);
+      width: calc(100% - 48px);
+      height: calc(100% - 48px);
+    }
+    .grid-item { aspect-ratio: unset; }
+  </style>
+</head>
+<body>
+
+<video id="camera-video" autoplay playsinline muted></video>
+<canvas id="camera-canvas"></canvas>
+<div id="hand-cursor"></div>
+<div id="cursor-ring"></div>
+<div id="camera-status"><div class="dot"></div><span class="status-text">Démarrage…</span></div>
+<div id="zoom-overlay"><img src="" alt="zoom"></div>
+<div id="zoom-indicator"></div>
+<div id="gesture-hint">
+  <span>☝ Index droit</span> — naviguer<br>
+  <span>🤏🤏 Deux pinces</span> — zoomer<br>
+  <span>✊✊ Deux poings</span> — retour
+</div>
+<div id="page-transition"></div>
+
+<header id="page-header">
+  <div class="logo-text">LPJ <span>Jules Verne</span></div>
+  <a href="formations.html" class="back-btn" data-link="formations.html">
+    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Formations
+  </a>
+  <div class="page-title">Métiers de l'agencement, de la menuiserie et de l'ameublement</div>
+</header>
+
+<main id="main-content">
+  <div class="page-grid">
+    <div class="grid-container cols-2">
+
+      <div class="grid-item" data-link="f21.html">
+        <img src="images/f21.png" alt="CAP Menuisier Installateur">
+        <div class="hover-overlay"></div>
+      </div>
+
+      <div class="grid-item" data-link="f22.html">
+        <img src="images/f22.png" alt="CAP Menuiserie Aluminium Verre">
+        <div class="hover-overlay"></div>
+      </div>
+
+      <div class="grid-item" data-link="f23.html">
+        <img src="images/f23.png" alt="BAC PRO Menuisier Agenceur">
+        <div class="hover-overlay"></div>
+      </div>
+
+      <div class="grid-item" data-link="f24.html">
+        <img src="images/f24.png" alt="BAC PRO Menuisier Agenceur">
+        <div class="hover-overlay"></div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<script src="js/hand-tracker.js"></script>
+<script src="js/page-controller.js"></script>
+</body>
+</html>

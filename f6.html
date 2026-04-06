@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CDI – Lycée Jules Verne</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4/hands.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<video id="camera-video" autoplay playsinline muted></video>
+<canvas id="camera-canvas"></canvas>
+<div id="hand-cursor"></div>
+<div id="cursor-ring"></div>
+<div id="camera-status"><div class="dot"></div><span class="status-text">Démarrage…</span></div>
+<div id="zoom-overlay"><img src="" alt="zoom"></div>
+<div id="zoom-indicator"></div>
+<div id="gesture-hint">
+  <span>☝ Index droit</span> — naviguer<br>
+  <span>🤏🤏 Deux pinces</span> — zoomer<br>
+  <span>✊✊ Deux poings</span> — retour
+</div>
+<div id="page-transition"></div>
+
+<header id="page-header">
+  <div class="logo-text">LPJ <span>Jules Verne</span></div>
+  <a href="formations.html" class="back-btn" data-link="formations.html">
+    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Formations
+  </a>
+  <div class="page-title">CDI</div>
+</header>
+
+<main id="main-content">
+  <div class="page-cdi">
+    <div style="display:flex; flex-direction:column; align-items:center; gap:16px;">
+      <div class="cdi-image-wrap"
+           data-link="https://lp-lyc-metier-jules-verne-etaples.62.ac-lille.fr/category/cdi/">
+        <img src="images/f61.png" alt="CDI – Centre de Documentation et d'Information">
+      </div>
+      <div class="cdi-label">Cliquez pour accéder au CDI en ligne</div>
+    </div>
+  </div>
+</main>
+
+<script src="js/hand-tracker.js"></script>
+<script src="js/page-controller.js"></script>
+<script>
+  // Override navigate to open external link
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('[data-link]').forEach(el => {
+      const link = el.dataset.link;
+      if (link && link.startsWith('http')) {
+        el.addEventListener('click', () => window.open(link, '_blank'));
+      }
+    });
+  });
+</script>
+</body>
+</html>

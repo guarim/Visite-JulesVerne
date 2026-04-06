@@ -1,0 +1,145 @@
+{
+  "pages": [
+    {
+      "id": "index",
+      "file": "index.html",
+      "title": "Bienvenue au Lycée Professionnel Jules Verne !",
+      "type": "accueil",
+      "backgroundImage": "images/home.png",
+      "autoRedirect": { "delay": 10000, "target": "formations.html" }
+    },
+    {
+      "id": "formations",
+      "file": "formations.html",
+      "title": "Les formations du lycée",
+      "type": "grid",
+      "images": [
+        { "src": "images/1.png", "link": "f1.html" },
+        { "src": "images/2.png", "link": "f2.html" },
+        { "src": "images/3.png", "link": "f3.html" },
+        { "src": "images/4.png", "link": "f4.html" },
+        { "src": "images/5.png", "link": "f5.html" },
+        { "src": "images/6.png", "link": "f6.html" }
+      ]
+    },
+    {
+      "id": "f1",
+      "file": "f1.html",
+      "title": "Métiers de l'Électricité et de ses Environnements Connectés",
+      "type": "image-video",
+      "image": { "src": "images/f11.png", "clickable": false },
+      "video": { "type": "youtube", "url": "https://www.youtube.com/embed/dQw4w9WgXcQ" }
+    },
+    {
+      "id": "f2",
+      "file": "f2.html",
+      "title": "Métiers de l'agencement, de la menuiserie et de l'ameublement",
+      "type": "grid",
+      "images": [
+        { "src": "images/f21.png", "link": "f21.html" },
+        { "src": "images/f22.png", "link": "f22.html" },
+        { "src": "images/f23.png", "link": "f23.html" },
+        { "src": "images/f24.png", "link": "f24.html" }
+      ]
+    },
+    {
+      "id": "f21",
+      "file": "f21.html",
+      "title": "CAP – Menuisier Installateur",
+      "type": "image-video",
+      "image": { "src": "images/f21.png", "clickable": false },
+      "video": { "type": "youtube", "url": "https://www.youtube.com/embed/dQw4w9WgXcQ" }
+    },
+    {
+      "id": "f22",
+      "file": "f22.html",
+      "title": "CAP – Menuiserie Aluminium Verre",
+      "type": "image-video",
+      "image": { "src": "images/f22.png", "clickable": false },
+      "video": { "type": "youtube", "url": "https://www.youtube.com/embed/dQw4w9WgXcQ" }
+    },
+    {
+      "id": "f23",
+      "file": "f23.html",
+      "title": "BAC PRO – Technicien Menuisier Agenceur",
+      "type": "image-video",
+      "image": { "src": "images/f23.png", "clickable": false },
+      "video": { "type": "youtube", "url": "https://www.youtube.com/embed/dQw4w9WgXcQ" }
+    },
+    {
+      "id": "f24",
+      "file": "f24.html",
+      "title": "BAC PRO – Technicien Menuisier Agenceur",
+      "type": "image-video",
+      "image": { "src": "images/f24.png", "clickable": false },
+      "video": { "type": "youtube", "url": "https://www.youtube.com/embed/dQw4w9WgXcQ" }
+    },
+    {
+      "id": "f3",
+      "file": "f3.html",
+      "title": "Métiers du Bâtiment – Gros Œuvre et Finitions",
+      "type": "grid",
+      "images": [
+        { "src": "images/f31.png", "link": "f31.html" },
+        { "src": "images/f32.png", "link": "f32.html" },
+        { "src": "images/f33.png", "link": "f33.html" },
+        { "src": "images/f34.png", "link": "f34.html" }
+      ]
+    },
+    {
+      "id": "f31",
+      "file": "f31.html",
+      "title": "CAP Maçon",
+      "type": "image-video",
+      "image": { "src": "images/f31.png", "clickable": false },
+      "video": { "type": "youtube", "url": "https://www.youtube.com/embed/dQw4w9WgXcQ" }
+    },
+    {
+      "id": "f32",
+      "file": "f32.html",
+      "title": "CAP Peintre Applicateur de Revêtement",
+      "type": "image-video",
+      "image": { "src": "images/f32.png", "clickable": false },
+      "video": { "type": "youtube", "url": "https://www.youtube.com/embed/dQw4w9WgXcQ" }
+    },
+    {
+      "id": "f33",
+      "file": "f33.html",
+      "title": "Bac Pro Aménagement et Finition du Bâtiment",
+      "type": "image-video",
+      "image": { "src": "images/f33.png", "clickable": false },
+      "video": { "type": "youtube", "url": "https://www.youtube.com/embed/dQw4w9WgXcQ" }
+    },
+    {
+      "id": "f34",
+      "file": "f34.html",
+      "title": "Titre Pro Peintre Façadier – Isolation Extérieure",
+      "type": "image-video",
+      "image": { "src": "images/f34.png", "clickable": false },
+      "video": { "type": "youtube", "url": "https://www.youtube.com/embed/dQw4w9WgXcQ" }
+    },
+    {
+      "id": "f4",
+      "file": "f4.html",
+      "title": "3ème Prépa-métiers",
+      "type": "image-video",
+      "image": { "src": "images/f41.png", "clickable": false },
+      "video": { "type": "youtube", "url": "https://www.youtube.com/embed/dQw4w9WgXcQ" }
+    },
+    {
+      "id": "f5",
+      "file": "f5.html",
+      "title": "CAP – Interventions en Maintenance Technique du Bâtiment",
+      "type": "image-video",
+      "image": { "src": "images/f51.png", "clickable": false },
+      "video": { "type": "youtube", "url": "https://www.youtube.com/embed/dQw4w9WgXcQ" }
+    },
+    {
+      "id": "f6",
+      "file": "f6.html",
+      "title": "CDI",
+      "type": "cdi",
+      "image": { "src": "images/f61.png", "clickable": true, "link": "https://lp-lyc-metier-jules-verne-etaples.62.ac-lille.fr/category/cdi/" }
+    }
+  ]
+}

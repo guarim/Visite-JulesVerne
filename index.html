@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienvenue au Lycée Professionnel Jules Verne !</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4/hands.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Caméra cachée -->
+<video id="camera-video" autoplay playsinline muted></video>
+<canvas id="camera-canvas"></canvas>
+
+<!-- Curseur main -->
+<div id="hand-cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- Statut caméra -->
+<div id="camera-status">
+  <div class="dot"></div>
+  <span class="status-text">Démarrage…</span>
+</div>
+
+<!-- Zoom overlay -->
+<div id="zoom-overlay"><img src="" alt="zoom"></div>
+<div id="zoom-indicator"></div>
+
+<!-- Hints gestes -->
+<div id="gesture-hint">
+  <span>☝ Index droit</span> — naviguer<br>
+  <span>🤏🤏 Deux pinces</span> — zoomer<br>
+  <span>✊✊ Deux poings</span> — retour
+</div>
+
+<!-- Transition -->
+<div id="page-transition"></div>
+
+<!-- En-tête -->
+<header id="page-header">
+  <div class="logo-text">LPJ <span>Jules Verne</span></div>
+  <div class="page-title">Bienvenue au Lycée Professionnel Jules Verne !</div>
+</header>
+
+<!-- Contenu principal -->
+<main id="main-content">
+  <div class="page-accueil">
+    <div class="bg-image" style="background-image: url('images/home.png');"></div>
+    <div class="bg-overlay"></div>
+
+    <div class="welcome-text">
+      <p>
+        Notre Lycée bénéficie d'un emplacement idéal : à la fois proche du centre-ville d'Étaples,
+        de la mer, de la gare, des équipements sportifs et du bois de Rombly, tout est réuni pour
+        que nos élèves et nos personnels puissent s'épanouir dans un environnement agréable.
+        De la 3<sup>ème</sup> Prépa-métiers jusqu'au Bac professionnel, en passant par le CAP,
+        nos formations s'adressent à la fois à des élèves en formation initiale, des apprentis
+        sous la bannière du CFA académique ou à des adultes en formation continue à travers le
+        GRETA grand Littoral. Préparant aux métiers du bâtiment, nos formations sont assurées
+        par des équipes motivées, investies et expérimentées, très attachées à la réussite de
+        chaque apprenant.
+      </p>
+    </div>
+
+    <div class="countdown">
+      <span id="countdown-text">Redirection dans <strong id="countdown-num">10</strong>s</span>
+      <div class="countdown-bar">
+        <div class="countdown-bar-inner" id="countdown-bar"></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="js/hand-tracker.js"></script>
+<script src="js/page-controller.js"></script>
+<script>
+  // Compte à rebours 10 secondes → formations.html
+  let seconds = 10;
+  const numEl = document.getElementById('countdown-num');
+  const interval = setInterval(() => {
+    seconds--;
+    if (numEl) numEl.textContent = seconds;
+    if (seconds <= 0) {
+      clearInterval(interval);
+      if (window.pageController) {
+        window.pageController.navigateTo('formations.html');
+      } else {
+        window.location.href = 'formations.html';
+      }
+    }
+  }, 1000);
+</script>
+</body>
+</html>

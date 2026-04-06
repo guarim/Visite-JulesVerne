@@ -27,7 +27,7 @@
       "file": "f1.html",
       "title": "Métiers de l'Électricité et de ses Environnements Connectés",
       "type": "image-video",
-      "image": { "src": "images/f11.png", "clickable": false },
+      "image": { "src": "images/f111.png", "clickable": false },
       "video": { "type": "youtube", "url": "https://www.youtube.com/embed/dQw4w9WgXcQ" }
     },
     {
@@ -47,7 +47,7 @@
       "file": "f21.html",
       "title": "CAP – Menuisier Installateur",
       "type": "image-video",
-      "image": { "src": "images/f21.png", "clickable": false },
+      "image": { "src": "images/f211.png", "clickable": false },
       "video": { "type": "youtube", "url":  "https://www.youtube.com/embed/KyVTGlRN6MI" }
     },
     {
@@ -55,7 +55,7 @@
       "file": "f22.html",
       "title": "CAP – Menuiserie Aluminium Verre",
       "type": "image-video",
-      "image": { "src": "images/f22.png", "clickable": false },
+      "image": { "src": "images/f221.png", "clickable": false },
       "video": { "type": "youtube", "url": "https://www.youtube.com/embed/FYQUCT0jEZo" }
     },
     {
@@ -63,7 +63,7 @@
       "file": "f23.html",
       "title": "BAC PRO – Technicien Menuisier Agenceur",
       "type": "image-video",
-      "image": { "src": "images/f23.png", "clickable": false },
+      "image": { "src": "images/f231.png", "clickable": false },
       "video": { "type": "youtube", "url": "https://www.youtube.com/embed/fOTJC6FeWWA" }
     },
     {
@@ -71,7 +71,7 @@
       "file": "f24.html",
       "title": "BAC PRO – Technicien Menuisier Aluminium Verre",
       "type": "image-video",
-      "image": { "src": "images/f24.png", "clickable": false },
+      "image": { "src": "images/f241.png", "clickable": false },
       "video": { "type": "youtube", "url": "https://www.youtube.com/embed/FYQUCT0jEZo" }
     },
     {

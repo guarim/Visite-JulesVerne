@@ -48,7 +48,7 @@
       "title": "CAP – Menuisier Installateur",
       "type": "image-video",
       "image": { "src": "images/f21.png", "clickable": false },
-      "video": { "type": "youtube", "url": "https://www.youtube.com/embed/dQw4w9WgXcQ" }
+      "video": { "type": "youtube", "url":  "https://www.youtube.com/embed/KyVTGlRN6MI" }
     },
     {
       "id": "f22",
@@ -56,7 +56,7 @@
       "title": "CAP – Menuiserie Aluminium Verre",
       "type": "image-video",
       "image": { "src": "images/f22.png", "clickable": false },
-      "video": { "type": "youtube", "url": "https://www.youtube.com/embed/dQw4w9WgXcQ" }
+      "video": { "type": "youtube", "url": "https://www.youtube.com/embed/FYQUCT0jEZo" }
     },
     {
       "id": "f23",
@@ -64,15 +64,15 @@
       "title": "BAC PRO – Technicien Menuisier Agenceur",
       "type": "image-video",
       "image": { "src": "images/f23.png", "clickable": false },
-      "video": { "type": "youtube", "url": "https://www.youtube.com/embed/dQw4w9WgXcQ" }
+      "video": { "type": "youtube", "url": "https://www.youtube.com/embed/fOTJC6FeWWA" }
     },
     {
       "id": "f24",
       "file": "f24.html",
-      "title": "BAC PRO – Technicien Menuisier Agenceur",
+      "title": "BAC PRO – Technicien Menuisier Aluminium Verre",
       "type": "image-video",
       "image": { "src": "images/f24.png", "clickable": false },
-      "video": { "type": "youtube", "url": "https://www.youtube.com/embed/dQw4w9WgXcQ" }
+      "video": { "type": "youtube", "url": "https://www.youtube.com/embed/FYQUCT0jEZo" }
     },
     {
       "id": "f3",
@@ -91,55 +91,55 @@
       "file": "f31.html",
       "title": "CAP Maçon",
       "type": "image-video",
-      "image": { "src": "images/f31.png", "clickable": false },
-      "video": { "type": "youtube", "url": "https://www.youtube.com/embed/dQw4w9WgXcQ" }
+      "image": { "src": "images/f311.png", "clickable": false },
+      "video": { "type": "youtube", "url": "https://www.youtube.com/embed/jZpYZY9CrjM" }
     },
     {
       "id": "f32",
       "file": "f32.html",
       "title": "CAP Peintre Applicateur de Revêtement",
       "type": "image-video",
-      "image": { "src": "images/f32.png", "clickable": false },
-      "video": { "type": "youtube", "url": "https://www.youtube.com/embed/dQw4w9WgXcQ" }
+      "image": { "src": "images/f321.png", "clickable": false },
+      "video": { "type": "youtube", "url": "https://www.youtube.com/embed/KyVTGlRN6MI" }
     },
     {
       "id": "f33",
       "file": "f33.html",
       "title": "Bac Pro Aménagement et Finition du Bâtiment",
       "type": "image-video",
-      "image": { "src": "images/f33.png", "clickable": false },
-      "video": { "type": "youtube", "url": "https://www.youtube.com/embed/dQw4w9WgXcQ" }
+      "image": { "src": "images/f331.png", "clickable": false },
+      "video": { "type": "youtube", "url": "https://www.youtube.com/embed/KyVTGlRN6MI"  }
     },
     {
       "id": "f34",
       "file": "f34.html",
       "title": "Titre Pro Peintre Façadier – Isolation Extérieure",
       "type": "image-video",
-      "image": { "src": "images/f34.png", "clickable": false },
-      "video": { "type": "youtube", "url": "https://www.youtube.com/embed/dQw4w9WgXcQ" }
+      "image": { "src": "images/f341.png", "clickable": false },
+      "video": { "type": "youtube", "url": "https://www.youtube.com/embed/KyVTGlRN6MI" }
     },
     {
       "id": "f4",
       "file": "f4.html",
       "title": "3ème Prépa-métiers",
       "type": "image-video",
-      "image": { "src": "images/f41.png", "clickable": false },
-      "video": { "type": "youtube", "url": "https://www.youtube.com/embed/dQw4w9WgXcQ" }
+      "image": { "src": "images/f411.png", "clickable": false },
+      "video": { "type": "youtube", "url": "https://www.youtube.com/embed/PvdrUBnD7Ys" }
     },
     {
       "id": "f5",
       "file": "f5.html",
       "title": "CAP – Interventions en Maintenance Technique du Bâtiment",
       "type": "image-video",
-      "image": { "src": "images/f51.png", "clickable": false },
-      "video": { "type": "youtube", "url": "https://www.youtube.com/embed/dQw4w9WgXcQ" }
+      "image": { "src": "images/f511.png", "clickable": false },
+      "video": { "type": "youtube", "url": "https://www.youtube.com/embed/M37BHq3Feyc" }
     },
     {
       "id": "f6",
       "file": "f6.html",
       "title": "CDI",
       "type": "cdi",
-      "image": { "src": "images/f61.png", "clickable": true, "link": "https://lp-lyc-metier-jules-verne-etaples.62.ac-lille.fr/category/cdi/" }
+      "image": { "src": "images/f51.png", "clickable": true, "link": "https://lp-lyc-metier-jules-verne-etaples.62.ac-lille.fr/category/cdi/" }
     }
   ]
 }
